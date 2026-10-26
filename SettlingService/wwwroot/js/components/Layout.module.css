@@ -1,0 +1,259 @@
+/* Layout Styles */
+.layoutContainer {
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+}
+
+.layoutMain {
+   flex-grow: 1;
+}
+
+.layoutContent {
+   padding-bottom: 16px;
+}
+
+/* Header Styles */
+.header {
+   width: 100%;
+}
+
+.headerNav {
+   background-color: white;
+   border-bottom: 1px solid #dee2e6;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   margin-bottom: 16px;
+   padding: 0;
+}
+
+.headerContainer {
+   width: 100%;
+   padding: 0 16px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.headerBrand {
+   display: inline-block;
+   padding: 6px 0;
+   font-size: 20px;
+   font-weight: 600;
+   color: #333;
+   text-decoration: none;
+   transition: color 0.2s;
+}
+
+.headerBrand:hover {
+   color: #667eea;
+   text-decoration: none;
+}
+
+.headerToggler {
+   display: none;
+   padding: 4px 8px;
+   background-color: transparent;
+   border: 1px solid #dee2e6;
+   border-radius: 4px;
+   cursor: pointer;
+   align-items: center;
+   justify-content: center;
+}
+
+.headerTogglerIcon {
+   display: inline-block;
+   width: 20px;
+   height: 20px;
+   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: 100%;
+}
+
+.headerCollapse {
+   display: flex;
+   flex-grow: 1;
+   align-items: center;
+   justify-content: space-between;
+   width: 80%;
+}
+
+.headerCollapseShow {
+   display: flex;
+}
+
+.headerNavList {
+   display: flex;
+   flex-direction: row;
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   flex-grow: 1;
+}
+
+.headerNavItem {
+   margin-right: 8px;
+}
+
+.headerNavLink {
+   display: block;
+   padding: 12px 16px;
+   color: #333;
+   text-decoration: none;
+   transition: color 0.2s;
+   font-size: 16px;
+}
+
+.headerNavLink:hover {
+   color: #667eea;
+   text-decoration: none;
+}
+
+.headerNavLinkActive {
+   color: #667eea;
+   font-weight: 600;
+}
+
+.headerNavRight {
+   display: flex;
+   flex-direction: row;
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+.headerDropdown {
+   position: relative;
+}
+
+.headerDropdownShow {
+   /* Additional styles if needed when dropdown is open */
+}
+
+.headerDropdownToggle {
+   display: block;
+   padding: 12px 16px;
+   color: #333;
+   text-decoration: none;
+   cursor: pointer;
+   transition: color 0.2s;
+   font-size: 16px;
+}
+
+.headerDropdownToggle:hover {
+   color: #667eea;
+   text-decoration: none;
+}
+
+.headerDropdownToggle::after {
+   content: "▼";
+   margin-left: 4px;
+   font-size: 10px;
+   vertical-align: middle;
+}
+
+.headerDropdownMenu {
+   position: absolute;
+   top: 100%;
+   right: 0;
+   z-index: 1000;
+   display: none;
+   min-width: 160px;
+   padding: 8px 0;
+   margin: 4px 0 0;
+   background-color: white;
+   border: 1px solid #dee2e6;
+   border-radius: 4px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   list-style: none;
+}
+
+.headerDropdownMenuShow {
+   display: block;
+}
+
+.headerDropdownItem {
+   display: block;
+   padding: 8px 16px;
+   color: #333;
+   text-decoration: none;
+   cursor: pointer;
+   transition: background-color 0.2s;
+   font-size: 14px;
+}
+
+.headerDropdownItem:hover {
+   background-color: #f8f9fa;
+   color: #333;
+   text-decoration: none;
+}
+
+/* Footer Styles */
+.footer {
+   border-top: 1px solid #dee2e6;
+   color: #6c757d;
+   margin-top: auto;
+   padding: 16px 0;
+}
+
+.footerContainer {
+   padding: 0 16px;
+}
+
+.footerLink {
+   color: #667eea;
+   text-decoration: none;
+   transition: color 0.2s;
+}
+
+.footerLink:hover {
+   color: #764ba2;
+   text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+   .headerToggler {
+      display: flex;
+   }
+
+   .headerCollapse {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+   }
+
+   .headerCollapseShow {
+      display: flex;
+   }
+
+   .headerNavList {
+      flex-direction: column;
+      width: 100%;
+   }
+
+   .headerNavItem {
+      width: 100%;
+      margin-right: 0;
+   }
+
+   .headerNavRight {
+      flex-direction: column;
+      width: 100%;
+   }
+
+   .headerDropdown {
+      width: 100%;
+   }
+
+   .headerDropdownMenu {
+      position: static;
+      width: 100%;
+      box-shadow: none;
+      border: none;
+      border-top: 1px solid #dee2e6;
+      margin: 0;
+   }
+}
+

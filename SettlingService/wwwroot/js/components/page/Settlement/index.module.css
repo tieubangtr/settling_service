@@ -1,0 +1,132 @@
+.settleContainer {
+   padding: 24px;
+   display: flex;
+   gap: 16px;
+   .settleLeft {
+      flex: 0 0 15%;
+      .settleTopHeader {
+         margin-bottom: 12px;
+         h3 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 600;
+            color: #333;
+         }
+      }
+      .settleMenu {
+         .settleMenuList {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            background-color: white;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #d1d5db;
+            .settleMenuItem {
+               border: 1px solid #d1d5db;
+               border-radius: 6px;
+               font-size: 14px;
+            }
+            .settleMenuLink {
+               display: block;
+               padding: 8px 12px;
+               text-decoration: none;
+               color: #333;
+               font-weight: 500;
+               border-radius: 6px;
+               transition: all 0.2s;
+               cursor: pointer;
+            }
+            .settleMenuLinkActive {
+               background-color: #e0edff;
+               color: #1d4ed8;
+               border:1px solid #2563eb;
+               font-weight: bold;
+            }
+         }
+      }
+   }
+   .settleRight {
+      flex: 0 0 85%;
+      background: white;
+      padding: 16px;
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      .settleRightHeader {
+         display: flex;
+         justify-content: space-between;
+         margin-bottom: 10px;
+         .title {
+            font-weight: bold;
+            font-size: 18px;
+         }
+         .listButton {
+            display: flex;
+            gap: 4px;
+            .button {
+               padding: 8px 16px;
+               border-radius: 6px;
+               cursor: pointer;
+               line-height: 1;
+            }
+            .payment {
+               background: #2563eb;
+               color: white;
+               border: 1px solid #2563eb;
+            }
+            .add {
+               background: white;
+               border: 1px solid #d1d5db;
+            }
+         }
+      }
+      .listTypeAsset {
+         display: flex;
+         gap: 8px;
+         margin-bottom: 10px;
+         .button {
+            padding: 8px 16px;
+            border-radius: 100px;
+            background: white;
+            border: 1px solid #d1d5db;
+            cursor: pointer;
+            line-height: 1;
+         }
+         .active {
+            background-color: #e0edff;
+            color: #1d4ed8;
+            border:1px solid #2563eb;
+            font-weight: bold;
+         }
+      }
+      .settleTable {
+         width: 100%;
+         border-collapse: collapse;
+         margin-bottom: 16px;
+         background: white;
+         thead {
+            background-color: white;
+         }
+         th {
+            padding: 8px;
+            text-align: left;
+            font-weight: bold;
+            border: 1px solid #e5e7eb;
+            font-size: 14px;
+         }
+         td {
+            padding: 8px;
+            border: 1px solid #e5e7eb;
+            font-size: 14px;
+            vertical-align: middle;
+         }
+         .settleCheckbox {
+            width: 13px;
+            height: 13px;
+            cursor: pointer;
+            accent-color: #667eea;
+         }
+      }
+   }
+}
